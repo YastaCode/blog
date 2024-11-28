@@ -13,6 +13,7 @@ const skills = ["HTML","CSS","JavaScript","React","Astro","Rédaction de documen
 const happy = true;
 const finished = false;
 const goal = 3;
+const skillColor = "rgb(12, 160, 160)";
 ---
 
 <html lang="fr">
@@ -22,13 +23,13 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-		<style>
+		<style define:vars={{skillColor}}>
 			h1{
 				color: rgb(0, 140, 255);
 				font-size: 4rem;
 			}
 			.skill{
-				color: rgb(6, 167, 167);
+				color: var(--skillColor);
 				font-weight: 500;
 			}
 		</style>
