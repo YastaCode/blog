@@ -7,7 +7,9 @@ const pageTitle = "Répertoire des étiquettes";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <ul>
-        {tags.map((tag) => <li>{tag}</li>)}
-    </ul>
+    <div>
+        {tags.map((tag) => (
+            <p><a href={`/tags/${tag}`}>{tag}</a></p>
+        ))}
+    </div>
 </BaseLayout>
